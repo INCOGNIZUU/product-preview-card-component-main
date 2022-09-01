@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: hsl(30, 38%, 92%);
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    .card {
+        width: 95%;
+        max-width: 375px;
+    }
+        .imageContainer {
+            display: flex;
+        }
+            .imageContainer img {
+                width: 100%;
+                border-radius: 10px 10px 0 0;
+            }
+            .imageContainer .desktopView {
+                display: none;
+            }
+        .imageInfo {
+            background-color: hsl(0, 0%, 100%);
+            padding: 20px;
+            border-radius: 0 0 10px 10px;
+        }  
+            .imageInfo p, .imageInfo h1{
+                color: hsl(228, 12%, 48%);
+                font-size: 14px;
+                font-weight: 500;
+                margin-bottom: 5px;
+            }
+            .imageInfo h1, .imageInfo h2 {
+                font-family: 'Fraunces', serif;
+                font-size: 35px;
+                margin-bottom: 10px;
+                
+            }
+            .imageInfo .category {
+                text-transform: uppercase;
+            }
+            .imageInfo h1 {
+                color: hsl(0, 0%, 0%);
+            }
+            .imageInfo .description {
+                line-height: 1.6;
+            }
+                .pricing {
+                    display: flex;
+                    align-items: center;
+                    margin-top: 15px;
+                }
+                    .pricing h2 {
+                        color: hsl(158, 36%, 37%);
+                        margin-right: 20px;
+                    }
+                    .pricing p {
+                        text-decoration: line-through;
+                    }
+
+            .imageInfo .btn {
+                background-color: hsl(158, 36%, 37%);
+                color: hsl(0, 0%, 100%);
+                font-weight: 700;
+                width: 100%;
+                padding: 15px;
+                border: 0;
+                border-radius: 10px;
+                cursor: pointer;
+            }
+                .imageInfo .btn:hover {
+                    filter: brightness(60%);
+                }
+                .btn img {
+                    vertical-align: top;
+                    margin-right: 5px;
+                }
+
+    @media (min-width: 768px) {
+        .card {
+            display: flex;
+            max-width: 600px;
+        }
+            .imageContainer .mobileView {
+                display: none;
+            }
+            .imageContainer .desktopView {
+                display: block;
+                border-radius: 10px 0 0 10px;
+                width: 300px;
+            }
+            .imageInfo {
+                width: 300px;
+                padding: 30px;
+                border-radius: 0 10px 10px 0;
+            }
+            .imageInfo .btn {
+                margin-top: 20px;
+            }
+
+    }
+
+    .attribution {
+        text-align: center;
+        width: 90%;
+        position: fixed;
+        bottom: 0;
+    }
